@@ -40,6 +40,8 @@ figure(6)
 imagesc(dil_BW_close_open)
 print('-dtiff', '-r600', fullfile(figures_folder,[imgfiles(k).name(1:end-4),'_mask.tif'])); 
 mask_img=img.*dil_BW_close_open;
+%% at this point we select a part of the masked image manually
+% mask_img=mask_img(200:1200,300:800);
 figure(7)
 imagesc(mask_img), colormap gray
 
